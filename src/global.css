@@ -1,2 +1,74 @@
 @import 'tailwindcss';
 @import 'uniwind';
+@import 'heroui-native/styles';
+
+/* -------------------------------------------------------------------------- */
+/*  Mobleet brand palette                                                     */
+/*  Dark zinc canvas + lime accent + peach highlight                          */
+/* -------------------------------------------------------------------------- */
+@theme {
+  --color-brand-lime: oklch(0.86 0.21 130);
+  --color-brand-lime-soft: oklch(0.92 0.13 130);
+  --color-brand-peach: oklch(0.83 0.13 60);
+  --color-brand-mint: oklch(0.88 0.12 170);
+
+  --color-zinc-canvas: oklch(0.155 0.005 285);
+  --color-zinc-surface: oklch(0.205 0.005 285);
+  --color-zinc-elevated: oklch(0.245 0.005 285);
+  --color-zinc-border: oklch(0.30 0.005 285);
+  --color-zinc-muted: oklch(0.62 0.012 285);
+}
+
+/* Override HeroUI Native dark theme tokens with our zinc + lime palette */
+@layer theme {
+  :root {
+    @variant dark {
+      /* Base */
+      --background: var(--color-zinc-canvas);
+      --foreground: oklch(0.98 0.003 285);
+
+      /* Surfaces */
+      --surface: var(--color-zinc-surface);
+      --surface-foreground: var(--foreground);
+      --surface-secondary: var(--color-zinc-elevated);
+      --surface-secondary-foreground: var(--foreground);
+      --surface-tertiary: oklch(0.28 0.005 285);
+      --surface-tertiary-foreground: var(--foreground);
+
+      /* Overlay */
+      --overlay: var(--color-zinc-elevated);
+      --overlay-foreground: var(--foreground);
+      --backdrop: oklch(0% 0 0 / 60%);
+
+      --muted: var(--color-zinc-muted);
+      --default: oklch(0.27 0.005 285);
+      --default-foreground: var(--foreground);
+
+      /* Brand accent: lime */
+      --accent: var(--color-brand-lime);
+      --accent-foreground: var(--color-zinc-canvas);
+
+      /* Form fields */
+      --field-background: var(--color-zinc-elevated);
+      --field-foreground: var(--foreground);
+      --field-placeholder: var(--color-zinc-muted);
+      --field-border: var(--color-zinc-border);
+
+      /* Status: success = mint, warning = peach */
+      --success: var(--color-brand-mint);
+      --success-foreground: var(--color-zinc-canvas);
+      --warning: var(--color-brand-peach);
+      --warning-foreground: var(--color-zinc-canvas);
+      --danger: oklch(0.62 0.21 25);
+      --danger-foreground: oklch(0.98 0.003 285);
+
+      /* Misc */
+      --segment: var(--color-zinc-elevated);
+      --segment-foreground: var(--foreground);
+      --border: var(--color-zinc-border);
+      --separator: oklch(0.36 0.005 285);
+      --focus: var(--accent);
+      --link: var(--color-brand-lime);
+    }
+  }
+}
