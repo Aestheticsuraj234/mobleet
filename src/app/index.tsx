@@ -1,11 +1,17 @@
-import { Button } from 'heroui-native';
-import { View } from 'react-native';
+import { Text, View, StyleSheet } from "react-native";
 
-export default function MyComponent() {
+export default function Index() {
   return (
-    <View className="flex-1 justify-center items-center bg-background">
-      <Button onPress={() => console.log('Pressed!')}>Get Started</Button>
-    
+    <View style={styles.container}>
+      <Text>Edit src/app/index.tsx to edit this screen.</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
