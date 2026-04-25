@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "uniwind": {
+      "source": "uni-stack/uniwind",
+      "sourceType": "github",
+      "computedHash": "b6efabdce34641cf6868694d76336d4ecc374e831bd6d83045518efa273dca3c"
+    }
+  }
+}
