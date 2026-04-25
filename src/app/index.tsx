@@ -1,9 +1,14 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      
+<Button
+  title="Press me"
+  colorClassName="accent-red-500 dark:accent-red-400"
+  onPress={() => console.log('Pressed')}
+/>
     </View>
   );
 }
