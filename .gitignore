@@ -31,7 +31,14 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+
+# Better Auth dev database
+auth.db
+auth.db-journal
+auth.db-shm
+auth.db-wal
 
 # typescript
 *.tsbuildinfo
