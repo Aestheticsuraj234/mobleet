@@ -13,7 +13,6 @@ type Provider = 'github';
 
 const LIME = '#bdf06e';
 const PEACH = '#fdba74';
-const DARK = '#0a0a0c';
 const LIGHT = '#fafafa';
 
 export default function SignIn() {
@@ -34,7 +33,7 @@ export default function SignIn() {
         );
         return;
       }
-      router.replace('/');
+      router.replace('/' as never);
     } catch (err) {
       Alert.alert(
         'Sign in failed',
@@ -145,9 +144,9 @@ export default function SignIn() {
               className="text-muted mt-3"
               style={{ fontSize: 15, lineHeight: 22 }}
             >
-              Practice anywhere — track your{' '}
-              <Text style={{ color: PEACH }}>streak</Text>, revisit solutions, and
-              stay consistent.
+              Practice anywhere - track your{' '}
+              <Text style={{ color: PEACH }}>streak</Text>, revisit solutions,
+              and stay consistent.
             </Text>
           </View>
 
@@ -203,18 +202,14 @@ export default function SignIn() {
             By continuing you agree to MobLeet&apos;s{' '}
             <Text
               style={{ color: PEACH, textDecorationLine: 'underline' }}
-              onPress={() =>
-                Linking.openURL('https://example.com/terms')
-              }
+              onPress={() => Linking.openURL('https://example.com/terms')}
             >
               Terms
             </Text>{' '}
             and{' '}
             <Text
               style={{ color: PEACH, textDecorationLine: 'underline' }}
-              onPress={() =>
-                Linking.openURL('https://example.com/privacy')
-              }
+              onPress={() => Linking.openURL('https://example.com/privacy')}
             >
               Privacy Policy
             </Text>
