@@ -1,7 +1,7 @@
-import { createAuthClient } from 'better-auth/react';
 import { expoClient } from '@better-auth/expo/client';
-import * as SecureStore from 'expo-secure-store';
+import { createAuthClient } from 'better-auth/react';
 import Constants from 'expo-constants';
+import * as SecureStore from 'expo-secure-store';
 
 /**
  * Resolves the Better Auth base URL.
@@ -17,7 +17,7 @@ function resolveBaseURL(): string {
 
     const hostUri =
         Constants.expoConfig?.hostUri ??
-        // @ts-expect-error - manifest is the legacy field, kept as a fallback
+       
         Constants.manifest?.hostUri;
 
     if (hostUri) {
