@@ -78,7 +78,7 @@ export default function Home() {
                 MobLeet
               </Text>
             </View>
-            <Text className="text-muted text-xs">Today</Text>
+            
           </View>
 
           <View className="mt-6 flex-row items-center">

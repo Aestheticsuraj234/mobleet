@@ -5,7 +5,7 @@ export default function ProblemsLayout() {
     <Stack
       screenOptions={{
         headerShown: false,
-        contentStyle: { backgroundColor: '#0a0a0c' },
+        contentStyle: { flex: 1, backgroundColor: '#0a0a0c' },
       }}
     />
   );
